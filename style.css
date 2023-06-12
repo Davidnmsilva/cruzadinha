@@ -1,0 +1,199 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body{
+    background-color: #191919;
+}
+
+#cruzadinha{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    justify-content:left;
+    overflow-x: hidden;
+}
+
+#gridCruzadinha{
+    width: 45%;
+    height: 80%;
+    padding-top: 10px;
+}
+
+#perguntas{
+    width: 40%;
+    height: 96vh;
+    margin-right: 50px;
+    margin-top: 10px;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+#perguntas::-webkit-scrollbar{
+    width: 10px;
+}
+
+#perguntas::-webkit-scrollbar-track {
+    background: #814592;
+    border-radius: 20px;
+  }
+
+#perguntas::-webkit-scrollbar-thumb {
+    background-color: #191919;
+    border-radius: 20px;
+    border: 3px solid #4e0063;
+}
+
+#perguntas div{
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #4e0063;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+#perguntas button{
+    padding: 8px 14px 8px 14px;
+    background-color: #b666cc;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#gridCruzadinha .resposta{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 2px;
+}
+
+#gridCruzadinha tr{
+    height: 45px;
+}
+
+#gridCruzadinha tr td #resposta{
+    width: 40px;
+    height: 40px;
+}
+
+.linha1 td input,
+.linha2 td input,
+.linha3 td input,
+.linha4 td input,
+.linha5 td input,
+.linha6 td input,
+.linha7 td input,
+.linha8 td input,
+.linha9 td input,
+.linha10 td input,
+.linha11 td input,
+.linha12 td input,
+.linha13 td input,
+.linha14 td input{
+    display: none;
+}
+
+.linha1 td:nth-child(1) input,
+.linha1 td:nth-child(2) input,
+.linha1 td:nth-child(4) input,
+.linha1 td:nth-child(5) input,
+.linha1 td:nth-child(6) input,
+.linha2 td:nth-child(1) input,
+.linha2 td:nth-child(6) input,
+.linha2 td:nth-child(7) input,
+.linha3 td:nth-child(1) input,
+.linha3 td:nth-child(3) input,
+.linha3 td:nth-child(5) input,
+.linha3 td:nth-child(6) input,
+.linha3 td:nth-child(7) input,
+.linha3 td:nth-child(12) input,
+.linha4 td:nth-child(1) input,
+.linha4 td:nth-child(3) input,
+.linha4 td:nth-child(5) input,
+.linha4 td:nth-child(7) input,
+.linha4 td:nth-child(9) input,
+.linha4 td:nth-child(10) input,
+.linha4 td:nth-child(11) input,
+.linha4 td:nth-child(12) input,
+.linha4 td:nth-child(13) input,
+.linha4 td:nth-child(14) input,
+.linha4 td:nth-child(15) input,
+.linha4 td:nth-child(16) input,
+.linha5 td:nth-child(1) input,
+.linha5 td:nth-child(2) input,
+.linha5 td:nth-child(3) input,
+.linha5 td:nth-child(4) input,
+.linha5 td:nth-child(5) input,
+.linha5 td:nth-child(12) input,
+.linha6 td:nth-child(2) input,
+.linha6 td:nth-child(3) input,
+.linha6 td:nth-child(4) input,
+.linha6 td:nth-child(5) input,
+.linha6 td:nth-child(6) input,
+.linha6 td:nth-child(7) input,
+.linha6 td:nth-child(8) input,
+.linha6 td:nth-child(9) input,
+.linha6 td:nth-child(10) input,
+.linha6 td:nth-child(11) input,
+.linha6 td:nth-child(12) input,
+.linha6 td:nth-child(13) input,
+.linha6 td:nth-child(14) input,
+.linha7 td:nth-child(3) input,
+.linha7 td:nth-child(5) input,
+.linha7 td:nth-child(12) input,
+.linha8 td:nth-child(3) input,
+.linha8 td:nth-child(4) input,
+.linha8 td:nth-child(5) input,
+.linha8 td:nth-child(6) input,
+.linha8 td:nth-child(7) input,
+.linha8 td:nth-child(8) input,
+.linha8 td:nth-child(9) input,
+.linha8 td:nth-child(10) input,
+.linha8 td:nth-child(12) input,
+.linha9 td:nth-child(3) input,
+.linha9 td:nth-child(9) input,
+.linha9 td:nth-child(10) input,
+.linha9 td:nth-child(11) input,
+.linha9 td:nth-child(12) input,
+.linha9 td:nth-child(13) input,
+.linha10 td:nth-child(8) input,
+.linha10 td:nth-child(9) input,
+.linha10 td:nth-child(10) input,
+.linha10 td:nth-child(11) input,
+.linha10 td:nth-child(12) input,
+.linha10 td:nth-child(13) input,
+.linha10 td:nth-child(14) input,
+.linha11 td:nth-child(12) input,
+.linha12 td:nth-child(1) input,
+.linha12 td:nth-child(2) input,
+.linha12 td:nth-child(3) input,
+.linha12 td:nth-child(4) input,
+.linha12 td:nth-child(5) input,
+.linha12 td:nth-child(6) input,
+.linha12 td:nth-child(7) input,
+.linha12 td:nth-child(8) input,
+.linha12 td:nth-child(9) input,
+.linha12 td:nth-child(10) input,
+.linha12 td:nth-child(11) input,
+.linha12 td:nth-child(12) input,
+.linha12 td:nth-child(13) input,
+.linha12 td:nth-child(14) input,
+.linha13 td:nth-child(6) input{
+    display: block;
+    text-align: center;
+    font-size: 20px;
+}
+
+.correto{
+    background-color: rgb(97, 253, 152);
+    border: 1px solid rgb(0, 193, 61);
+    color: rgb(0, 99, 44);
+}
+
+.destacado{
+    transition: all 0.2s;
+    border: 2px solid #800085;
+    box-shadow: inset 0px 0px 4px 1px #b100b8;
+}

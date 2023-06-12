@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cruzadinha!</title>
+</head>
+<body>
+    <section id="cruzadinha">
+
+        <section id="perguntas">
+            <div>
+                <p>1 -  Esta parte do processador realiza todas as operações lógicas e aritméticas, possuindo além da própria Unidade Lógica e Aritmética, os registradores (Acumulador, registradores de propósito gerais e especiais) e a Unidade de Controle.</p> 
+                <!--Cpu-->
+                <button onclick="verLocal(1)">Ver Local</button>
+            </div>
+            <div>
+                <p>2 - Unidade responsável pela realização das operações lógicas e aritméticas. Implementa as operações lógicas (NOT, AND, OR,
+                    XOR) e aritméticas (geralmente adição, subtração, multiplicação, divisão, dependendo do
+                    microprocessador). Em geral, o resultado de uma operação é armazenado no acumulador.</p>
+                <!--Ula-->
+                <button onclick="verLocal(2)">Ver Local</button>
+            </div>
+            <div>
+                <p>3 - Faz o armazenamento da Informação Binária (dados, endereços e instruções) e fica localizado na CPU. Corresponde a uma memória local rápida do microprocessador, destinada ao armazenamento de dados e instruções.</p>
+                <!--Registradores-->
+                <button onclick="verLocal(3)">Ver Local</button>
+            </div>
+            <div>
+                <p>4 - Memória de acesso aleatório, armazena os dados que o computador precisa recuperar rapidamente. É uma memória volátil.</p>
+                <!--RAM-->
+                <button onclick="verLocal(4)">Ver Local</button>
+            </div>
+            <div>
+                <p>5 - É um tipo de memória que permite apenas a leitura, ou seja, as suas informações são gravadas pelo fabricante uma única vez e após isso não podem ser alteradas ou apagadas, somente acessadas. É uma memória não volátil.</p>
+                <!--ROM-->
+                <button onclick="verLocal(5)">Ver Local</button>
+            </div>
+            <div>
+                <p>6 - Memória programável apagável somente de leitura, pode ser apagada apenas por exposição a forte luz ultravioleta.</p>
+                <!--EPROM-->
+                <button onclick="verLocal(6)">Ver Local</button>
+            </div>
+            <div>
+                <p>7 - Um tipo de memória EEPROM, não volátil com ocupação minima de espaço, e mais rápida.</p>
+                <!--Flash-->
+                <button onclick="verLocal(7)">Ver Local</button>
+            </div>
+            <div>
+                <p>8 - Também conhecida como memória auxiliar ou armazenamento de massa, tem como função armazenar grandes quantidades de informações.</p>
+                <!--Memória de Massa-->
+                <button onclick="verLocal(8)">Ver Local</button>
+            </div>
+            <div>
+                <p>9 - É uma característica dos computadores mais modernos que possibilita que determinados subsistemas de hardware dentro do computador acessem a memória do sistema, sem depender da unidade de processamento central (CPU).</p>
+                <!--DMA-->
+                <button onclick="verLocal(9)">Ver Local</button>
+            </div>
+            <div>
+                <p>10 - É um sinal de controle utilizado em sistemas digitais para selecionar um dispositivo específico entre vários dispositivos conectados em um barramento ou interface.</p>
+                <!--CS-->
+                <button onclick="verLocal(10)">Ver Local</button>
+            </div>
+            <div>
+                <p>11 - É um conjunto de linhas de comunicação utilizado em sistemas computacionais para transmitir informações de endereço. Essas linhas são responsáveis por indicar a localização de dados ou instruções armazenados na memória ou em dispositivos de I/O (entrada e saída).</p>
+                <!--Adress Bus-->
+                <button onclick="verLocal(11)">Ver Local</button>
+            </div>
+            <div>
+                <p>12 - É responsável pela transferência de dados entre diferentes componentes do sistema, como a CPU (Unidade Central de Processamento), a memória e os dispositivos de entrada e saída.</p>
+                <!--Data Bus-->
+                <button onclick="verLocal(12)">Ver Local</button>
+            </div>
+            <div>
+                <p>13 - Processador intermediário da Intel com excelente relação entre desempenho e preço. Possui normalmente quatro núcleos, podendo váriar para dual-core ou hexa-core.</p>
+                <!--I5-->
+                <button onclick="verLocal(13)">Ver Local</button>
+            </div>
+            <div>
+                <p>14 - Processador de alta performance da Intel, ideal para tarefas exigentes como edição de vídeo e jogos. Podem ter quatro, seis, oito ou mais núcleos físicos, dependendo do modelo.</p>
+                <button onclick="verLocal(14)">Ver Local</button>
+            </div>
+            <div>
+                <p>15 - É composto por dois núcleos físicos. Cada núcleo é capaz de executar instruções e realizar tarefas independentemente um do outro.</p>
+                <button onclick="verLocal(15)">Ver Local</button>
+            </div>
+            <div>
+                <p>16 - É composto por quatro núcleos físicos. Cada um desses núcleos pode executar instruções e tarefas independentemente. Ter quatro núcleos permite que o processador lide com uma carga de trabalho maior e execute várias tarefas de forma mais eficiente.</p>
+                <button onclick="verLocal(16)">Ver Local</button>
+            </div>
+            <div>
+                <p>17 - São unidades básicas de execução dentro de um processo. Pode ser considerada como uma sequência de instruções que pode ser executada independentemente por um processador.</p>
+                <button onclick="verLocal(17)">Ver Local</button>
+            </div>
+            <div>
+                <p>18 -  É uma forma de memória de acesso rápido utilizada em computadores para armazenar dados frequentemente acessados. É uma memória de alta velocidade que fica entre a unidade de processamento (CPU) e a memória principal (RAM), com o objetivo de reduzir o tempo de acesso aos dados mais utilizados.
+                </p>
+                <button onclick="verLocal(18)">Ver Local</button>
+            </div>
+        </section>
+
+        <section id="gridCruzadinha">
+            <table>
+                <tr class="linha1">
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha1_cs_c" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha1_cs_s" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha1_cpu_c" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha1_cpu_p" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha1_cpu_u" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                </tr>
+                <tr class="linha2">
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha2_cache_a" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha2_ula_l" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha2_dma_d" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                </tr>
+                <tr class="linha3">
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha3_cache_c" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha3_threads_t" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha3_ram_r" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha3_ram_a" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha3_ram_m" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha3_addressbus_a" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                </tr>
+                <tr class="linha4">
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha4_cache_h" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha4_threads_h" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha4_rom_o" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha4_dma_a" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha4_quadcore_q" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha4_quadcore_u" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha4_quadcore_a" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha4_quadcore_d" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha4_quadcore_c" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha4_quadcore_o" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha4_quadcore_r" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha4_quadcore_e" class="resposta"></td>
+                </tr>
+                <tr class="linha5">
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha5_cache_e" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha5_eprom_p" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha5_eprom_r" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha5_eprom_o" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha5_eprom_m" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha5_addressbus_d" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                </tr>
+                <tr class="linha6">
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha6_regis_r" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha6_regis_e" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha6_regis_g" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha6_regis_i" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha6_regis_s" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha6_regis_t" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha6_regis_r2" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha6_regis_a" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha6_regis_d" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha6_regis_o" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha6_regis_r3" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha6_regis_e2" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha6_regis_s2" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                </tr>
+                <tr class="linha7">
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha7_threads_a" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha7_i5_5" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha7_addressbus_e" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                </tr>
+                <tr class="linha8">
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha8_threads_d" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha8_dualcore_u" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha8_dualcore_a" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha8_dualcore_l" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha8_dualcore_c" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha8_dualcore_o" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha8_dualcore_r" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha8_dualcore_e" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha8_addressbus_s" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                </tr>
+                <tr class="linha9">
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha9_threads_s" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha9_flash_f" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha9_flash_l" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha9_flash_a" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha9_flash_s" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha9_flash_h" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                </tr>
+                <tr class="linha10">
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha10_databus_d" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha10_databus_a" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha10_databus_t" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha10_databus_a2" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha10_databus_b" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha10_databus_u" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha10_databus_s" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                </tr>
+                <tr class="linha11">
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha11_addressbus_u" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                </tr>
+                <tr class="linha12">
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha12_memoriademassa_m" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha12_memoriademassa_e" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha12_memoriademassa_m2" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha12_memoriademassa_o" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha12_memoriademassa_r" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha12_memoriademassa_i" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha12_memoriademassa_a" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha12_memoriademassa_d" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha12_memoriademassa_e2" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha12_memoriademassa_m3" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha12_memoriademassa_a2" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha12_memoriademassa_s" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha12_memoriademassa_s2" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha12_memoriademassa_a3" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                </tr>
+                <tr class="linha13">
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" onkeyup="confirmarCruzadinha()" id="linha13_i7_7" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                    <td><input maxlength="1" class="resposta"></td>
+                </tr>
+                
+            </table>
+        </section>
+    </section>
+    <script src="./cruzadinha.js"></script>
+</body>
+</html>
