@@ -17,19 +17,28 @@ function confirmarCruzadinha(){
     var ula_l = linha2_ula_l.value;
     var ula_a = linha3_ram_a.value;
 
-    var regis_r = linha6_regis_r.value;
-    var regis_e = linha6_regis_e.value;
-    var regis_g = linha6_regis_g.value;
+    var quadcore_q = linha4_quadcore_q.value;
+    var quadcore_u = linha4_quadcore_u.value;
+    var quadcore_a = linha4_quadcore_a.value;
+    var quadcore_d = linha4_quadcore_d.value;
+    var quadcore_c = linha4_quadcore_c.value;
+    var quadcore_o = linha4_quadcore_o.value;
+    var quadcore_r = linha4_quadcore_r.value;
+    var quadcore_e = linha4_quadcore_e.value;
+
+    var regis_r = linha3_regis_r.value;
+    var regis_e = linha4_quadcore_e.value;
+    var regis_g = linha5_regis_g.value;
     var regis_i = linha6_regis_i.value;
-    var regis_s = linha6_regis_s.value;
-    var regis_t = linha6_regis_t.value;
-    var regis_r2 = linha6_regis_r2.value;
-    var regis_a = linha6_regis_a.value;
-    var regis_d = linha6_regis_d.value;
-    var regis_o = linha6_regis_o.value;
-    var regis_r3 = linha6_regis_r3.value;
-    var regis_e2 = linha6_regis_e2.value;
-    var regis_s2 = linha6_regis_s2.value;
+    var regis_s = linha7_regis_s.value;
+    var regis_t = linha8_regis_t.value;
+    var regis_r2 = linha9_regis_r2.value;
+    var regis_a = linha10_regis_a.value;
+    var regis_d = linha11_regis_d.value;
+    var regis_o = linha12_regis_o.value;
+    var regis_r3 = linha13_regis_r3.value;
+    var regis_e2 = linha14_regis_e2.value;
+    var regis_s2 = linha15_regis_s2.value;
 
     var eprom_e = linha5_cache_e.value;
     var eprom_p = linha5_eprom_p.value;
@@ -52,7 +61,7 @@ function confirmarCruzadinha(){
     var threads_t = linha3_threads_t.value;
     var threads_h = linha4_threads_h.value;
     var threads_r = linha5_eprom_r.value;
-    var threads_e = linha6_regis_e.value;
+    var threads_e = linha6_threads_e.value;
     var threads_a = linha7_threads_a.value;
     var threads_d = linha8_threads_d.value;
     var threads_s = linha9_threads_s.value;
@@ -79,7 +88,7 @@ function confirmarCruzadinha(){
     var flash_h = linha9_flash_h.value;
 
     var i5_i = linha6_regis_i.value;
-    var i5_5 = linha7_i5_5.value;
+    var i5_5 = linha6_i5_5.value;
 
     var i7_i = linha12_memoriademassa_i.value; 
     var i7_7 = linha13_i7_7.value;
@@ -93,15 +102,6 @@ function confirmarCruzadinha(){
     var dualcore_r = linha8_dualcore_r.value;
     var dualcore_e = linha8_dualcore_e.value;
 
-    var quadcore_q = linha4_quadcore_q.value;
-    var quadcore_u = linha4_quadcore_u.value;
-    var quadcore_a = linha4_quadcore_a.value;
-    var quadcore_d = linha4_quadcore_d.value;
-    var quadcore_c = linha4_quadcore_c.value;
-    var quadcore_o = linha4_quadcore_o.value;
-    var quadcore_r = linha4_quadcore_r.value;
-    var quadcore_e = linha4_quadcore_e.value;
-
     var databus_d = linha10_databus_d.value;
     var databus_a = linha10_databus_a.value;
     var databus_t = linha10_databus_t.value;
@@ -113,7 +113,7 @@ function confirmarCruzadinha(){
     var addbus_a = linha3_addressbus_a.value;
     var addbus_d = linha4_quadcore_d.value;
     var addbus_d2 = linha5_addressbus_d.value;
-    var addbus_r = linha6_regis_r3.value;
+    var addbus_r = linha6_addressbus_r.value;
     var addbus_e = linha7_addressbus_e.value;
     var addbus_s = linha8_addressbus_s.value;
     var addbus_s2 = linha9_flash_s.value;
@@ -126,51 +126,7 @@ function confirmarCruzadinha(){
             document.querySelector('#linha3_addressbus_a'),
             document.querySelector('#linha4_quadcore_d'),
             document.querySelector('#linha5_addressbus_d'),
-            document.querySelector('#linha6_regis_r3'),
-            document.querySelector('#linha7_addressbus_e'),
-            document.querySelector('#linha8_addressbus_s'),
-            document.querySelector('#linha9_flash_s'),
-            document.querySelector('#linha10_databus_b'),
-            document.querySelector('#linha11_addressbus_u'),
-            document.querySelector('#linha12_memoriademassa_s')
-        ];
-        
-        for (let i = 0; i < addressColor.length; i++) {
-            const idAtual = addressColor[i];
-            
-            idAtual.classList.add('correto');
-            idAtual.disabled = true;
-        }
-    }
-
-    if((addbus_a + addbus_d + addbus_d2 + addbus_r + addbus_e + addbus_s + addbus_s2 + addbus_b + addbus_u + addbus_s3).toUpperCase() == 'ADDRESSBUS'){
-        var addressColor = [
-            document.querySelector('#linha3_addressbus_a'),
-            document.querySelector('#linha4_quadcore_d'),
-            document.querySelector('#linha5_addressbus_d'),
-            document.querySelector('#linha6_regis_r3'),
-            document.querySelector('#linha7_addressbus_e'),
-            document.querySelector('#linha8_addressbus_s'),
-            document.querySelector('#linha9_flash_s'),
-            document.querySelector('#linha10_databus_b'),
-            document.querySelector('#linha11_addressbus_u'),
-            document.querySelector('#linha12_memoriademassa_s')
-        ];
-        
-        for (let i = 0; i < addressColor.length; i++) {
-            const idAtual = addressColor[i];
-            
-            idAtual.classList.add('correto');
-            idAtual.disabled = true;
-        }
-    }
-
-    if((addbus_a + addbus_d + addbus_d2 + addbus_r + addbus_e + addbus_s + addbus_s2 + addbus_b + addbus_u + addbus_s3).toUpperCase() == 'ADDRESSBUS'){
-        var addressColor = [
-            document.querySelector('#linha3_addressbus_a'),
-            document.querySelector('#linha4_quadcore_d'),
-            document.querySelector('#linha5_addressbus_d'),
-            document.querySelector('#linha6_regis_r3'),
+            document.querySelector('#linha6_addressbus_r'),
             document.querySelector('#linha7_addressbus_e'),
             document.querySelector('#linha8_addressbus_s'),
             document.querySelector('#linha9_flash_s'),
@@ -250,19 +206,19 @@ function confirmarCruzadinha(){
 
     if((regis_r + regis_e + regis_g + regis_i + regis_s + regis_t + regis_r2 + regis_a + regis_d + regis_o + regis_r3 + regis_e2 + regis_s2).toUpperCase() == 'REGISTRADORES'){
         var regisColor = [
-            document.querySelector('#linha6_regis_r'),
-            document.querySelector('#linha6_regis_e'),
-            document.querySelector('#linha6_regis_g'),
+            document.querySelector('#linha3_regis_r'),
+            document.querySelector('#linha4_quadcore_e'),
+            document.querySelector('#linha5_regis_g'),
             document.querySelector('#linha6_regis_i'),
-            document.querySelector('#linha6_regis_s'),
-            document.querySelector('#linha6_regis_t'),
-            document.querySelector('#linha6_regis_r2'),
-            document.querySelector('#linha6_regis_a'),
-            document.querySelector('#linha6_regis_d'),
-            document.querySelector('#linha6_regis_o'),
-            document.querySelector('#linha6_regis_r3'),
-            document.querySelector('#linha6_regis_e2'),
-            document.querySelector('#linha6_regis_s2')
+            document.querySelector('#linha7_regis_s'),
+            document.querySelector('#linha8_regis_t'),
+            document.querySelector('#linha9_regis_r2'),
+            document.querySelector('#linha10_regis_a'),
+            document.querySelector('#linha11_regis_d'),
+            document.querySelector('#linha12_regis_o'),
+            document.querySelector('#linha13_regis_r3'),
+            document.querySelector('#linha14_regis_e2'),
+            document.querySelector('#linha15_regis_s2')
         ];
         
         for (let i = 0; i < regisColor.length; i++) {
@@ -340,7 +296,7 @@ function confirmarCruzadinha(){
             document.querySelector('#linha3_threads_t'),
             document.querySelector('#linha4_threads_h'),
             document.querySelector('#linha5_eprom_r'),
-            document.querySelector('#linha6_regis_e'),
+            document.querySelector('#linha6_threads_e'),
             document.querySelector('#linha7_threads_a'),
             document.querySelector('#linha8_threads_d'),
             document.querySelector('#linha9_threads_s')
@@ -400,7 +356,7 @@ function confirmarCruzadinha(){
     if((i5_i+ i5_5).toUpperCase() == 'I5'){
         var i5Color = [
             document.querySelector('#linha6_regis_i'),
-            document.querySelector('#linha7_i5_5')
+            document.querySelector('#linha6_i5_5')
         ];
         
         for (let i = 0; i < i5Color.length; i++) {
@@ -483,8 +439,8 @@ function confirmarCruzadinha(){
 
 
 function verLocal(pergunta){
-    var cs_c = (linha1_cs_c);
-    var cs_s = (linha1_cs_s);
+    var cs_c = linha1_cs_c;
+    var cs_s = linha1_cs_s;
 
     var cpu_c = linha1_cpu_c;
     var cpu_p = linha1_cpu_p;
@@ -500,19 +456,28 @@ function verLocal(pergunta){
     var ula_l = linha2_ula_l;
     var ula_a = linha3_ram_a;
 
-    var regis_r = linha6_regis_r;
-    var regis_e = linha6_regis_e;
-    var regis_g = linha6_regis_g;
+    var quadcore_q = linha4_quadcore_q;
+    var quadcore_u = linha4_quadcore_u;
+    var quadcore_a = linha4_quadcore_a;
+    var quadcore_d = linha4_quadcore_d;
+    var quadcore_c = linha4_quadcore_c;
+    var quadcore_o = linha4_quadcore_o;
+    var quadcore_r = linha4_quadcore_r;
+    var quadcore_e = linha4_quadcore_e;
+
+    var regis_r = linha3_regis_r;
+    var regis_e = linha4_quadcore_e;
+    var regis_g = linha5_regis_g;
     var regis_i = linha6_regis_i;
-    var regis_s = linha6_regis_s;
-    var regis_t = linha6_regis_t;
-    var regis_r2 = linha6_regis_r2;
-    var regis_a = linha6_regis_a;
-    var regis_d = linha6_regis_d;
-    var regis_o = linha6_regis_o;
-    var regis_r3 = linha6_regis_r3;
-    var regis_e2 = linha6_regis_e2;
-    var regis_s2 = linha6_regis_s2;
+    var regis_s = linha7_regis_s;
+    var regis_t = linha8_regis_t;
+    var regis_r2 = linha9_regis_r2;
+    var regis_a = linha10_regis_a;
+    var regis_d = linha11_regis_d;
+    var regis_o = linha12_regis_o;
+    var regis_r3 = linha13_regis_r3;
+    var regis_e2 = linha14_regis_e2;
+    var regis_s2 = linha15_regis_s2;
 
     var eprom_e = linha5_cache_e;
     var eprom_p = linha5_eprom_p;
@@ -535,7 +500,7 @@ function verLocal(pergunta){
     var threads_t = linha3_threads_t;
     var threads_h = linha4_threads_h;
     var threads_r = linha5_eprom_r;
-    var threads_e = linha6_regis_e;
+    var threads_e = linha6_threads_e;
     var threads_a = linha7_threads_a;
     var threads_d = linha8_threads_d;
     var threads_s = linha9_threads_s;
@@ -562,7 +527,7 @@ function verLocal(pergunta){
     var flash_h = linha9_flash_h;
 
     var i5_i = linha6_regis_i;
-    var i5_5 = linha7_i5_5;
+    var i5_5 = linha6_i5_5;
 
     var i7_i = linha12_memoriademassa_i; 
     var i7_7 = linha13_i7_7;
@@ -576,15 +541,6 @@ function verLocal(pergunta){
     var dualcore_r = linha8_dualcore_r;
     var dualcore_e = linha8_dualcore_e;
 
-    var quadcore_q = linha4_quadcore_q;
-    var quadcore_u = linha4_quadcore_u;
-    var quadcore_a = linha4_quadcore_a;
-    var quadcore_d = linha4_quadcore_d;
-    var quadcore_c = linha4_quadcore_c;
-    var quadcore_o = linha4_quadcore_o;
-    var quadcore_r = linha4_quadcore_r;
-    var quadcore_e = linha4_quadcore_e;
-
     var databus_d = linha10_databus_d;
     var databus_a = linha10_databus_a;
     var databus_t = linha10_databus_t;
@@ -596,7 +552,7 @@ function verLocal(pergunta){
     var addbus_a = linha3_addressbus_a;
     var addbus_d = linha4_quadcore_d;
     var addbus_d2 = linha5_addressbus_d;
-    var addbus_r = linha6_regis_r3;
+    var addbus_r = linha6_addressbus_r;
     var addbus_e = linha7_addressbus_e;
     var addbus_s = linha8_addressbus_s;
     var addbus_s2 = linha9_flash_s;
