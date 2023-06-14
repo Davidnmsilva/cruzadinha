@@ -1,7 +1,7 @@
 
 function confirmarCruzadinha(){
-    var cs_c = (linha1_cs_c.value);
-    var cs_s = (linha1_cs_s.value);
+    var cs_c = (linha9_cs_c.value);
+    var cs_s = (linha9_threads_s.value);
 
     var cpu_c = linha1_cpu_c.value;
     var cpu_p = linha1_cpu_p.value;
@@ -46,9 +46,9 @@ function confirmarCruzadinha(){
     var eprom_o = linha5_eprom_o.value;
     var eprom_m = linha5_eprom_m.value;
 
-    var dma_d = linha2_dma_d.value;
-    var dma_m = linha3_ram_m.value;
-    var dma_a = linha4_dma_a.value;
+    var dma_d = linha11_dma_d.value;
+    var dma_m = linha12_memoriademassa_m2.value;
+    var dma_a = linha13_dma_a.value;
 
     var ram_r = linha3_ram_r.value;
     var ram_a = linha3_ram_a.value;
@@ -81,11 +81,11 @@ function confirmarCruzadinha(){
     var memo_s2 = linha12_memoriademassa_s2.value;
     var memo_a3 = linha12_memoriademassa_a3.value;
 
-    var flash_f = linha9_flash_f.value;
-    var flash_l = linha9_flash_l.value;
-    var flash_a = linha9_flash_a.value;
-    var flash_s = linha9_flash_s.value;
-    var flash_h = linha9_flash_h.value;
+    var flash_f = linha15_flash_f.value;
+    var flash_l = linha15_flash_l.value;
+    var flash_a = linha15_flash_a.value;
+    var flash_s = linha15_regis_s2.value;
+    var flash_h = linha15_flash_h.value;
 
     var i5_i = linha6_regis_i.value;
     var i5_5 = linha6_i5_5.value;
@@ -145,8 +145,8 @@ function confirmarCruzadinha(){
 
     if((cs_c + cs_s).toUpperCase() == 'CS'){
         var csColor = [
-            document.querySelector('#linha1_cs_c'),
-            document.querySelector('#linha1_cs_s')
+            document.querySelector('#linha9_cs_c'),
+            document.querySelector('#linha9_threads_s')
         ];
         
         for (let i = 0; i < csColor.length; i++) {
@@ -248,9 +248,9 @@ function confirmarCruzadinha(){
 
     if((dma_d + dma_m + dma_a).toUpperCase() == 'DMA'){
         var dmaColor = [
-            document.querySelector('#linha2_dma_d'),
-            document.querySelector('#linha3_ram_m'),
-            document.querySelector('#linha4_dma_a')
+            document.querySelector('#linha11_dma_d'),
+            document.querySelector('#linha12_memoriademassa_m2'),
+            document.querySelector('#linha13_dma_a')
         ];
         
         for (let i = 0; i < dmaColor.length; i++) {
@@ -338,11 +338,11 @@ function confirmarCruzadinha(){
 
     if((flash_f+ flash_l + flash_a + flash_s + flash_h).toUpperCase() == 'FLASH'){
         var flashColor = [
-            document.querySelector('#linha9_flash_f'),
-            document.querySelector('#linha9_flash_l'),
-            document.querySelector('#linha9_flash_a'),
-            document.querySelector('#linha9_flash_s'),
-            document.querySelector('#linha9_flash_h')
+            document.querySelector('#linha15_flash_f'),
+            document.querySelector('#linha15_flash_l'),
+            document.querySelector('#linha15_flash_a'),
+            document.querySelector('#linha15_regis_s2'),
+            document.querySelector('#linha15_flash_h')
         ];
         
         for (let i = 0; i < flashColor.length; i++) {
@@ -439,16 +439,16 @@ function confirmarCruzadinha(){
 
 
 function verLocal(pergunta){
-    var cs_c = linha1_cs_c;
-    var cs_s = linha1_cs_s;
+    var cs_c = linha9_cs_c;
+    var cs_s = linha9_threads_s;
 
     var cpu_c = linha1_cpu_c;
     var cpu_p = linha1_cpu_p;
     var cpu_u = linha1_cpu_u;
 
-    var cache_c = linha1_cs_c;
+    var cache_c = cs_c;
     var cache_a = linha2_cache_a;
-    var cache_c = linha3_cache_c;
+    var cache_c2 = linha3_cache_c;
     var cache_h = linha4_cache_h;
     var cache_e = linha5_cache_e;
 
@@ -485,9 +485,9 @@ function verLocal(pergunta){
     var eprom_o = linha5_eprom_o;
     var eprom_m = linha5_eprom_m;
 
-    var dma_d = linha2_dma_d;
-    var dma_m = linha3_ram_m;
-    var dma_a = linha4_dma_a;
+    var dma_d = linha11_dma_d;
+    var dma_m = linha12_memoriademassa_m2;
+    var dma_a = linha13_dma_a;
 
     var ram_r = linha3_ram_r;
     var ram_a = linha3_ram_a;
@@ -520,11 +520,11 @@ function verLocal(pergunta){
     var memo_s2 = linha12_memoriademassa_s2;
     var memo_a3 = linha12_memoriademassa_a3;
 
-    var flash_f = linha9_flash_f;
-    var flash_l = linha9_flash_l;
-    var flash_a = linha9_flash_a;
-    var flash_s = linha9_flash_s;
-    var flash_h = linha9_flash_h;
+    var flash_f = linha15_flash_f;
+    var flash_l = linha15_flash_l;
+    var flash_a = linha15_flash_a;
+    var flash_s = linha15_regis_s2;
+    var flash_h = linha15_flash_h;
 
     var i5_i = linha6_regis_i;
     var i5_5 = linha6_i5_5;
@@ -685,7 +685,7 @@ function verLocal(pergunta){
     } else if(pergunta == 18){
         cache_c.classList.add('destacado');
         cache_a.classList.add('destacado');
-        cache_c.classList.add('destacado');
+        cache_c2.classList.add('destacado');
         cache_h.classList.add('destacado');
         cache_e.classList.add('destacado');
     }

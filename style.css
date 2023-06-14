@@ -17,7 +17,6 @@ body{
 
 #gridCruzadinha{
     width: 45%;
-    height: 80%;
     padding-top: 10px;
 }
 
@@ -65,8 +64,8 @@ body{
 }
 
 #gridCruzadinha .display{
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
     margin-bottom: 2px;
     text-transform: uppercase;
     text-align: center;
@@ -74,7 +73,7 @@ body{
 }
 
 #gridCruzadinha tr{
-    height: 45px;
+    height: 34px;
 }
 
 #gridCruzadinha .resposta{
