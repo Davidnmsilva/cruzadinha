@@ -1,4 +1,3 @@
-
 function confirmarCruzadinha(){
     var cs_c = (linha9_cs_c.value);
     var cs_s = (linha9_threads_s.value);
@@ -7,7 +6,7 @@ function confirmarCruzadinha(){
     var cpu_p = linha1_cpu_p.value;
     var cpu_u = linha1_cpu_u.value;
 
-    var cache_c = linha1_cs_c.value;
+    var cache_c = linha1_cache_c.value;
     var cache_a = linha2_cache_a.value;
     var cache_c = linha3_cache_c.value;
     var cache_h = linha4_cache_h.value;
@@ -157,9 +156,9 @@ function confirmarCruzadinha(){
         }
     }
 
-    if((cs_c + cache_a + cache_c + cache_h + cache_e).toUpperCase() == 'CACHE'){
+    if((cache_c + cache_a + cache_c + cache_h + cache_e).toUpperCase() == 'CACHE'){
         var cacheColor = [
-            document.querySelector('#linha1_cs_c'),
+            document.querySelector('#linha1_cache_c'),
             document.querySelector('#linha2_cache_a'),
             document.querySelector('#linha3_cache_c'),
             document.querySelector('#linha4_cache_h'),
@@ -437,7 +436,6 @@ function confirmarCruzadinha(){
     }
 }
 
-
 function verLocal(pergunta){
     var cs_c = linha9_cs_c;
     var cs_s = linha9_threads_s;
@@ -446,7 +444,7 @@ function verLocal(pergunta){
     var cpu_p = linha1_cpu_p;
     var cpu_u = linha1_cpu_u;
 
-    var cache_c = cs_c;
+    var cache_c = cache_c;
     var cache_a = linha2_cache_a;
     var cache_c2 = linha3_cache_c;
     var cache_h = linha4_cache_h;
@@ -587,7 +585,7 @@ function verLocal(pergunta){
         regis_d.classList.add('destacado');
         regis_o.classList.add('destacado');
         regis_r3.classList.add('destacado'); 
-        regis_e2.classList.add('destacado'); 
+        regis_e2.classList.add('destacado');
         regis_s2.classList.add('destacado'); 
     } else if(pergunta == 4){
         ram_r.classList.add('destacado');
@@ -690,3 +688,27 @@ function verLocal(pergunta){
         cache_e.classList.add('destacado');
     }
 }
+
+function verificarVitoria(){
+    var inputs = document.querySelectorAll('.display')
+    var vitoria = true
+
+    inputs.forEach(e =>{
+        if(!e.classList.contains("correto")){
+            vitoria = false
+        }
+    })
+    if(vitoria){
+        return true
+    }else{
+        return false
+    }
+}
+
+var interval = setInterval(()=>{
+    if(verificarVitoria()){
+        alert("Parabéns! Você venceu!")
+        clearInterval(interval)
+    }
+    console.log(verificarVitoria())
+},1000)
